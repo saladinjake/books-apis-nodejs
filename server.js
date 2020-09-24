@@ -2,6 +2,8 @@ import '@babel/polyfill';
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
+// import router from './app/routes/routes';
+import connection from './app/connection';
 import cors from 'cors';
 
 dotenv.config();
@@ -17,6 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(router);
 
 //Home route
 app.get('/', (req, res) => {
