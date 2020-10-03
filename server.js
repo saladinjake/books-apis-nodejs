@@ -13,7 +13,7 @@ const { PORT } = process.env;
 const database_ip = process.env.IP;
 const corsOptions = {
     origin: 'http://localhost:3000',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+    optionsSuccessStatus: 200 //
 }
 
 app.use(cors(corsOptions))
@@ -38,7 +38,7 @@ app.use((req, res) => res.status(405).send({
 // server down
 app.use((req, res) => res.status(500).send({
     'status': 500,
-    'error': 'Oops! The problem is not on your side. Hang on, we will fix this soon'
+    'error': 'Oops! Please  contact the administrator'
 }));
 
 // current process environment
